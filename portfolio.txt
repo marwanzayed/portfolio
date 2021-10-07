@@ -1,0 +1,75 @@
+TEXT
+
+I'm Marwan Zayed
+Back-end web developer
+
+Back-end web developer living in Egypt.
+I am currently learning.
+I am 14 years old and have 1 year experience.
+I look forward to improving myself every day.
+I look forward to elegance and softness in designs
+
+My Skills
+These are my skills, let me show you.
+
+My Works
+These are my works, let me show you.
+
+Contact Me
+contact with me
+
+Egypt - Helwan
+
+Icon
+
+<i class="las la-home"></i>
+
+<i class="las la-file"></i>
+<i class="lar la-file"></i>
+
+<i class="las la-code"></i>
+
+<i class="las la-briefcase"></i>
+
+<i class="las la-phone"></i>
+
+<i class="las la-search-location"></i>
+
+<i class="las la-envelope"></i>
+<i class="lar la-envelope"></i>
+
+<i class="lab la-github"></i>
+
+<i class="lab la-facebook"></i>
+
+<i class="lab la-telegram"></i>
+
+Color 
+
+--dark-color: #202c37;
+--dark-color-2: #2b3945;
+--white-color: #fff;
+--white-color-2: #fff;
+--yellow-color: #dc9e4b;
+
+--dark-color: #ddd;
+--dark-color-2: #fff;
+--white-color: #5d5d5d;
+--white-color-2: #000;
+
+Font
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
+
+font-family: 'Cairo', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+Links
+
+https://www.facebook.com/marwan.zayed.18
+
+https://github.com/marwanzayed
+
+https://t.me/marwan_zayed
