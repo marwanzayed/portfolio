@@ -1,11 +1,11 @@
 // Hidden Loader
 let loader = document.getElementById("load");
 
-document.body.style.overflow = 'hidden'
+document.body.style.overflow = "hidden";
 
 setTimeout(function () {
   loader.style.cssText = "opacity: 0; transition: all 1s linear;";
-  document.body.style.overflow = 'auto'
+  document.body.style.overflow = "auto";
 }, 2000);
 
 setTimeout(function () {
@@ -16,26 +16,69 @@ setTimeout(function () {
 
 let divider = document.getElementById("divider");
 let nav = document.getElementById("nav");
-let icon = document.getElementById("icon");
+let closeDiv = document.getElementById("close");
 
 divider.onclick = function () {
-  divider.classList.toggle("open");
+  divider.classList.add("open");
   if (divider.classList.contains("open") === true) {
     nav.style.cssText =
-      "left: 0; display: block; transition: all .3s linear;";
-    document.getElementById("navbar").style.cssText =
-      "width: calc(100% - 50px); transition: all 0.3s linear;";
+      "z-index: 55555; opacity: 1; visibility: visible; transition: all 1s linear;";
+  }
+};
+closeDiv.onclick = function () {
+  nav.style.cssText =
+    "z-index: -1; opacity: 0; visibility: hidden; transition: all 1s linear;";
+};
+
+// Added Class Active To Li Link
+
+let lis = document.querySelectorAll(".nav-ul li a");
+
+lis.forEach((li) => {
+  li.addEventListener("click", function () {
+    lis.forEach((li) => {
+      li.classList.remove("active");
+      this.classList.add("active");
+      nav.style.cssText =
+        "z-index: -1; opacity: 0; visibility: hidden; transition: all 1s linear;";
+    });
+  });
+});
+
+// Typeing Text In Heading
+
+let p = document.querySelector(".home h3");
+let text = "Full Stack Web Developer";
+
+let index = 0;
+
+function typeing() {
+  index += 1;
+  p.textContent = text.slice(0, index);
+  if (index >= 24) {
+    index = 0;
+  }
+}
+
+setInterval(() => typeing(), 300);
+
+// Scroll To Top
+
+let btn = document.querySelector("#top");
+
+btn.style.opacity = "0";
+
+window.onscroll = function () {
+  if (window.scrollY >= 500) {
+    btn.style.cssText = "opacity: 1; transition: all 0.3s ease-in-out;";
   } else {
-    nav.style.cssText = "left: -50px; transition: all 0.3s linear;";
-    document.getElementById("navbar").style.cssText =
-      "width: 100%; transition: all 0.3s linear;";
+    btn.style.cssText = "opacity: 0; transition: all 0.3s ease-in-out;";
   }
 };
 
-// Added Class Active To Nav Icon
-
-if (window.scrollY >= 600) {
-  document.getElementById("home").classList.add("active");
-} else {
-  document.getElementById("home").classList.remove("active");
-}
+btn.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
