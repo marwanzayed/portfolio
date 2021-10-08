@@ -48,7 +48,7 @@ lis.forEach((li) => {
 // Typeing Text In Heading
 
 let p = document.querySelector(".home h3");
-let text = "Full Stack Web Developer";
+let text = "Front End Web Developer";
 
 let index = 0;
 
