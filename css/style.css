@@ -291,8 +291,6 @@ a {
   background-color: var(--yellow-color);
   color: #fff;
   padding: 10px;
-  animation: topbootom 1s infinite ease-in-out;
-  -webkit-animation: topbootom 1s infinite ease-in-out;
   transition: all 1s ease-in-out;
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
