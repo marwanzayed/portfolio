@@ -9,7 +9,7 @@
 
     <title>Portfolio</title>
 
-    <link rel="stylesheet" href="css/line-awesome.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
 
     <link rel="icon" href="images/m.jpg" />
 
@@ -32,6 +32,15 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,900;1,600;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Start Loader -->
@@ -45,10 +54,27 @@
     <!-- Start Scroll Top -->
 
     <div class="scroll-top">
-      <i class="las la-arrow-up" id="top"></i>
+      <i class="fas fa-arrow-up" id="top"></i>
     </div>
 
     <!-- End Scrol Top -->
+
+    <!-- Start Edit Website -->
+    <i class="fas fa-cog" id="cog"></i>
+    <div class="edit" id="edit">
+      <div class="box">
+        <div class="color">
+          <h4 class="text-center">Color Change</h4>
+          <ul>
+            <li data-color="#e91e63"></li>
+            <li data-color="#ff9800"></li>
+            <li data-color="#8bc34a"></li>
+            <li data-color="#03a9f4"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Edit Website -->
 
     <!-- Start Header -->
 
@@ -78,23 +104,27 @@
       <div class="nav-ul">
         <ul>
           <li>
-            <a href="#home" class="active">Home</a>
+            <a href="#home" class="active"><span></span> Home</a>
           </li>
 
           <li>
-            <a href="#about">About Me</a>
+            <a href="#about"><span></span> About Me</a>
           </li>
 
           <li>
-            <a href="#skills">Skills</a>
+            <a href="#skills"><span></span> Skills</a>
           </li>
 
           <li>
-            <a href="#works">Works</a>
+            <a href="#services"><span></span> Services</a>
           </li>
 
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#works"><span></span> Works</a>
+          </li>
+
+          <li>
+            <a href="#contact"><span></span> Contact</a>
           </li>
         </ul>
       </div>
@@ -117,57 +147,7 @@
         <!-- Start Effect -->
 
         <div class="effect-warp">
-          <div class="effect effect-1"></div>
-
-          <div class="effect effect-2">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-
           <div class="effect effect-3"></div>
-
-          <div class="effect effect-4">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
 
           <div class="effect effect-5">
             <div></div>
@@ -224,81 +204,134 @@
           I look forward to improving myself every day. <br />
           I look forward to elegance and softness in designs
         </p>
+      </div>
 
-        <div id="skills"></div>
+      <!-- End About -->
 
-        <div class="effect-warp">
-          <div class="effect effect-1"></div>
+      <!-- Start Skills -->
 
-          <div class="effect effect-3"></div>
+      <div class="skills" id="skills">
+        <div class="card">
+          <h2 class="head">My Skills</h2>
+
+          <p class="headP">These are my skills, let me show you.</p>
+
+          <div class="item">
+            <div class="cal text-center">
+              <span>
+                <img src="images/html5.svg" class="imgWidth" alt="HTML" />
+              </span>
+
+              <span>HTML</span>
+            </div>
+
+            <div class="cal text-center">
+              <span>
+                <img src="images/css.svg" class="imgWidth" alt="CSS" />
+              </span>
+
+              <span>CSS</span>
+            </div>
+
+            <div class="cal text-center">
+              <span>
+                <img
+                  src="images/bootstrap.svg"
+                  class="imgWidth"
+                  alt="Bootstrap"
+                />
+              </span>
+
+              <span>Bootstrap</span>
+            </div>
+
+            <div class="cal text-center">
+              <span>
+                <img src="images/js.svg" class="imgWidth" alt="JavaScript" />
+              </span>
+
+              <span>JavaScript</span>
+            </div>
+
+            <div class="cal text-center">
+              <span>
+                <img src="images/sass.svg" class="imgWidth" alt="Sass" />
+              </span>
+
+              <span>Sass</span>
+            </div>
+          </div>
+          <div class="progress">
+            <div>
+              <div class="prog" data-prgo="100%" style="width: 100%">
+                HTML - 100%
+              </div>
+            </div>
+            <div>
+              <div class="prog" data-prgo="90%" style="width: 90%">
+                CSS - 90%
+              </div>
+            </div>
+            <div>
+              <div class="prog" data-prgo="60%" style="width: 60%">
+                Sass - 60%
+              </div>
+            </div>
+            <div>
+              <div class="prog" data-prgo="50%" style="width: 50%">
+                JavaScript - 50%
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- End About -->
-
-    <!-- Start Skills -->
-
-    <div class="skills">
-      <div class="card">
-        <h2 class="head">My Skills</h2>
-
-        <p class="headP">These are my skills, let me show you.</p>
-
-        <div class="item">
-          <div class="cal text-center">
-            <span>
-              <img src="images/html5.svg" class="imgWidth" alt="HTML" />
-            </span>
-
-            <span>HTML</span>
-          </div>
-
-          <div class="cal text-center">
-            <span>
-              <img src="images/css.svg" class="imgWidth" alt="CSS" />
-            </span>
-
-            <span>CSS</span>
-          </div>
-
-          <div class="cal text-center">
-            <span>
-              <img
-                src="images/bootstrap.svg"
-                class="imgWidth"
-                alt="Bootstrap"
-              />
-            </span>
-
-            <span>Bootstrap</span>
-          </div>
-
-          <div class="cal text-center">
-            <span>
-              <img src="images/js.svg" class="imgWidth" alt="JavaScript" />
-            </span>
-
-            <span>JavaScript</span>
-          </div>
-
-          <div class="cal text-center">
-            <span>
-              <img src="images/sass.svg" class="imgWidth" alt="Sass" />
-            </span>
-
-            <span>Sass</span>
-          </div>
-        </div>
-      </div>
-      <div id="works"></div>
     </div>
 
     <!-- End Skills -->
 
+    <!-- Start Services -->
+    <div class="services" id="services">
+      <div class="card">
+        <h2 class="head">My Services</h2>
+
+        <p class="headP">These are my Services, let me show you.</p>
+
+        <div class="item">
+          <div class="col text-center">
+            <i class="fas fa-laptop-code fa-2x"></i>
+            <h3>Web Design</h3>
+            <p>
+              Design a complete website for you using <br />
+              HTML, CSS, JavaScript, Bootstrap, Sass <br />
+              and make the website responsive with all screens.
+            </p>
+          </div>
+
+          <div class="col text-center">
+            <i class="fas fa-code fa-2x"></i>
+            <h3>Clean Code</h3>
+            <p>And this is by writing a clean code with comments.</p>
+          </div>
+
+          <div class="col text-center">
+            <i class="fas fa-laptop-code fa-2x"></i>
+            <h3>Fast in creating websites</h3>
+            <p>
+              Yes, I can create sites quickly, but not a word quickly, <br />
+              it means that I write quickly, but it means that I write <br />
+              code automatically and I do not need to repeat the code in <br />
+              the coordination because before I start I create ready-made <br />
+              classes that work on coordinating repeated things.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Services -->
+
     <!-- Start Works -->
 
-    <div class="works">
+    <div class="works" id="works">
       <div class="card">
         <h2 class="head">My Works</h2>
 
@@ -312,11 +345,11 @@
 
             <div class="mask">
               <a href="https://marwanzayed.github.io/cloud/" target="_blank">
-                <i class="lab la-github"></i> Live Demo
+                <i class="fab fa-github"></i> Live Demo
               </a>
 
               <a href="https://github.com/marwanzayed/cloud/" target="_blank">
-                <i class="lab la-github"></i> Source Code
+                <i class="fab fa-github"></i> Source Code
               </a>
             </div>
           </div>
@@ -336,12 +369,12 @@
 
         <div class="items">
           <div class="cal">
-            <i class="las la-briefcase"></i> <span>Email</span>
+            <i class="fas fa-envelope"></i> <span>Email</span>
 
             <p>marwanzayedshaban@gmail.com</p>
           </div>
           <div class="cal">
-            <i class="las la-search-location"></i> <span>Location</span>
+            <i class="fas fa-map-marked-alt"></i> <span>Location</span>
 
             <p>Egypt - Helwan</p>
           </div>
@@ -363,24 +396,25 @@
           <ul>
             <li>
               <a href="https://www.facebook.com/marwan.zayed.18">
-                <i class="lab la-facebook-f" title="Facebook"></i>
+                <i class="fab fa-facebook" title="Facebook"></i>
               </a>
             </li>
 
             <li>
               <a href="https://github.com/marwanzayed">
-                <i class="lab la-github" title="Github"></i>
+                <i class="fab fa-github" title="Github"></i>
               </a>
             </li>
             <li>
               <a href="https://t.me/marwan_zayed">
-                <i class="lab la-telegram" title="Telegram"></i>
+                <i class="fab fa-telegram-plane" title="Telegram"></i>
               </a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
+
     <!-- End Footer -->
     <script src="js/script.js"></script>
   </body>

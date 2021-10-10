@@ -1,7 +1,54 @@
-<i class="las la-cog"></i>
+--yellow-color: #dc9e4b;
+--dark-color: #202c37;
+--dark-color-2: #2b3945;
+--white-color: #fff 
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,900;1,600;1,900&display=swap" rel="stylesheet">
+<i class="fab fa-github"></i>
 
-font-family: 'Poppins', sans-serif;
+<i class="fab fa-telegram"></i>
+<i class="fab fa-telegram-plane"></i>
+
+<i class="fab fa-facebook-square"></i>
+<i class="fab fa-facebook-f"></i>
+<i class="fab fa-facebook"></i>
+
+<i class="fas fa-cog"></i>
+
+<i class="fas fa-arrow-up"></i>
+
+<i class="fas fa-envelope"></i>
+
+<i class="fas fa-map-marked-alt"></i>
+
+<i class="fas fa-moon"></i>
+
+<i class="fas fa-sun"></i>
+
+
+New Page
+
+Services
+
+These are my Services, let me show you.
+
+Design a complete website for you using HTML, CSS, JavaScript, Bootstrap, Sass and make the website responsive with all screens.
+
+Web Design
+
+Color Change
+
+Dark Mode
+
+
+Light Mode
+
+Change Language
+
+Arabic
+
+Einglish
+
+Change Mode
+
+<i class="fas fa-laptop-code"></i>
+<i class="fas fa-code"></i>
