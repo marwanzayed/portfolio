@@ -82,3 +82,31 @@ btn.onclick = function () {
     behavior: "smooth",
   });
 };
+
+// Edit The WebSite
+
+let cog = document.getElementById("cog");
+
+cog.onclick = function () {
+  cog.classList.toggle("open");
+  if (cog.classList.contains("open") === true) {
+    document.getElementById("edit").style.cssText =
+      "opacity: 1;visibility: visible; transition: all 0.5s linear;";
+  } else {
+    document.getElementById("edit").style.cssText =
+      "opacity: 0;visibility: hidden; transition: all 0.5s linear;";
+  }
+};
+
+// Color Change In On Click
+
+let edit = document.querySelectorAll(".edit li");
+let html = document.querySelector("html");
+
+edit.forEach((li) => {
+  li.addEventListener("click", (e) => {
+    window.localStorage.setItem("color", e.currentTarget.dataset.color);
+    html.style.cssText = `--yellow-color: ${e.currentTarget.dataset.color};`;
+  });
+});
+
