@@ -18,6 +18,8 @@
 }
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--yellow-color) transparent;
+  scrollbar-width: thin;
 }
 body {
   background-color: var(--dark-color);
