@@ -1,7 +1,6 @@
 /* Start Variables */
 
 :root {
-  --yellow-color: #dc9e4b;
   --dark-color: #202c37;
   --dark-color-2: #2b3945;
   --white-color: #fff;
@@ -186,7 +185,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: var(--white-color);
+  background-color: var(--dark-color);
   position: fixed;
   width: 100%;
   z-index: 99999;
@@ -323,7 +322,7 @@ i.fa-cog.open {
   cursor: pointer;
 }
 .edit .box li:nth-child(1) {
-  background-color: #e91e63;
+  background-color: #dc9e4b;
 }
 .edit .box li:nth-child(2) {
   background-color: #ff9800;
@@ -368,6 +367,7 @@ i.fa-cog.open {
   font-weight: 600;
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
+  transform: rotate(180deg);
 }
 .navbar .divider {
   display: flex;
@@ -502,17 +502,15 @@ i.fa-cog.open {
   height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -2px;
   border-radius: 25px;
   background-color: var(--yellow-color);
   z-index: -1;
   transition: 0.5s;
 }
-.nav .nav-ul ul li a:hover {
-  border: 0;
-}
 .nav .nav-ul ul li a:hover span {
-  width: 100%;
+  width: 106%;
+  border: 1px solid var(--yellow-color);
 }
 .nav .nav-ul ul li a.active span {
   width: 100%;
@@ -678,14 +676,16 @@ i.fa-cog.open {
   background-color: var(--dark-color-2);
   margin: 10px;
   width: 100%;
-  padding: 5px;
+  border-radius: 10px;
+  padding: 3px;
 }
 .skills .progress div div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--yellow-color);
   margin: 0px;
+  width: 0;
+  padding: 10px;
+  transition: all 2s linear;
+  border-radius: 10px;
 }
 /* End Skills */
 
@@ -856,8 +856,13 @@ i.fa-cog.open {
 }
 .contact .items .cal p {
   color: var(--yellow-color);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 800;
+}
+@media (max-width: 767px) {
+  .contact .items .cal p {
+    font-size: 12px;
+  }
 }
 /* End Contact */
 
@@ -878,19 +883,36 @@ i.fa-cog.open {
 .footer div ul li {
   margin: 0 10px;
 }
-.footer div ul a {
-  font-size: 20px;
-  color: #fff;
-  padding: 5px;
-  background-color: var(--background-color);
-  transition: all 0.5s linear;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
+.footer div ul a i {
+  padding: 10px 0px;
+  background-color: #4d4d4d;
+  color: #bababa;
+  margin-right: 4px;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  zoom: 1;
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+  width: 40px;
+  display: block;
 }
-.footer div ul a:hover {
-  color: var(--yellow-color);
+
+.footer div ul a i:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+.footer div ul a .fa-facebook-f:hover {
+  background-color: #3b5998;
+}
+.footer div ul a .fa-github:hover {
+  background-color: #ff9933;
+}
+.footer div ul a .fa-twitter:hover {
+  background-color: #55acee;
+}
+.footer div ul a .fa-codepen:hover {
+  background-color: #444;
 }
 /* End Footer */
 
