@@ -14,9 +14,9 @@ setTimeout(function () {
 
 // Show And Hidden Nav
 
-let divider = document.getElementById("divider");
-let nav = document.getElementById("nav");
-let closeDiv = document.getElementById("close");
+let divider = document.getElementById("divider"),
+  nav = document.getElementById("nav"),
+  closeDiv = document.getElementById("close");
 
 divider.onclick = function () {
   divider.classList.add("open");
@@ -47,8 +47,8 @@ lis.forEach((li) => {
 
 // Typeing Text In Heading
 
-let p = document.querySelector(".home h3");
-let text = "Front End Web Developer";
+let p = document.querySelector(".home h3"),
+  text = "Front End Web Developer";
 
 let index = 0;
 
@@ -100,8 +100,15 @@ cog.onclick = function () {
 
 // Color Change In On Click
 
-let edit = document.querySelectorAll(".edit li");
-let html = document.querySelector("html");
+let edit = document.querySelectorAll(".edit li"),
+  html = document.querySelector("html");
+if (window.localStorage.getItem("color") !== null) {
+  html.style.cssText = `--yellow-color: ${window.localStorage.getItem(
+    "color"
+  )};`;
+} else {
+  html.style.cssText = `--yellow-color: #dc9e4b;`;
+}
 
 edit.forEach((li) => {
   li.addEventListener("click", (e) => {
@@ -110,3 +117,84 @@ edit.forEach((li) => {
   });
 });
 
+// Fill Bar
+let progress = document.querySelector(".progress"),
+  prog = document.querySelectorAll(".prog");
+
+window.addEventListener("scroll", function () {
+  const progressWidth = progress.getBoundingClientRect().top;
+  if (window.innerHeight > progressWidth) {
+    prog.forEach((bar) => {
+      const barWidth = bar.dataset.prgo;
+      bar.style.width = `${barWidth}%`;
+    });
+  } else {
+    prog.forEach((bar) => {
+      bar.style.width = `0`;
+    });
+  }
+});
+
+// Cut Class Active To Nav
+let home = document.getElementById("home");
+
+let about = document.getElementById("about");
+
+let skills = document.getElementById("skills");
+
+let services = document.getElementById("services");
+
+let works = document.getElementById("works");
+
+let contact = document.getElementById("contact");
+
+window.addEventListener("scroll", () => {
+  homeScroll = home.getBoundingClientRect().top;
+  if (window.innerHeight > homeScroll) {
+    let homeA = document.querySelector('.nav-ul a[href="#home"]');
+    lis.forEach((li) => {
+      li.classList.remove("active");
+      homeA.classList.add("active");
+    });
+  }
+  aboutScroll = about.getBoundingClientRect().top;
+  if (window.innerHeight > aboutScroll) {
+    let abouta = document.querySelector('.nav-ul a[href="#about"]');
+    lis.forEach((li) => {
+      li.classList.remove("active");
+      abouta.classList.add("active");
+    });
+  }
+  skillsScroll = skills.getBoundingClientRect().top;
+  if (window.innerHeight > skillsScroll) {
+    let skillsa = document.querySelector('.nav-ul a[href="#skills"]');
+    lis.forEach((li) => {
+      li.classList.remove("active");
+      skillsa.classList.add("active");
+    });
+  }
+  servicesScroll = services.getBoundingClientRect().top;
+  if (window.innerHeight > servicesScroll) {
+    let servicesa = document.querySelector('.nav-ul a[href="#services"]');
+    lis.forEach((li) => {
+      li.classList.remove("active");
+      servicesa.classList.add("active");
+    });
+  }
+  worksScroll = works.getBoundingClientRect().top;
+  if (window.innerHeight > worksScroll) {
+    let worksa = document.querySelector('.nav-ul a[href="#works"]');
+    lis.forEach((li) => {
+      li.classList.remove("active");
+      worksa.classList.add("active");
+    });
+  }
+  contactScroll = contact.getBoundingClientRect().top;
+  if (window.innerHeight > contactScroll) {
+    let contacta = document.querySelector('.nav-ul a[href="#contact"]');
+    lis.forEach((li) => {
+      li.classList.remove("active");
+      contacta.classList.add("active");
+    });
+  }
+});
