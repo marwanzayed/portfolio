@@ -114,6 +114,21 @@ ol {
   color: var(--yellow-color);
   font-size: 28px;
   border-left: 2px solid var(--yellow-color);
+  transition: all 0.3s linear;
+  width: fit-content;
+  cursor: pointer;
+  border-color: var(--yellow-color);
+  background: linear-gradient(
+    to right,
+    var(--yellow-color) 50%,
+    var(--dark-color) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.head:hover {
+  background-position: left bottom;
+  color: #fff;
 }
 .headP {
   font-size: 20px;
@@ -213,59 +228,50 @@ a {
 /* End Load */
 
 /* Start Scroll Top */
-.scroll-top {
-  position: relative;
-  text-align: center;
-}
 
-.scroll-top i {
-  font-weight: bold;
-  border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
+.top {
   position: fixed;
   bottom: 50px;
   right: 20px;
-  cursor: pointer;
-  font-size: 20px;
-  background-color: var(--yellow-color);
-  color: #fff;
-  padding: 10px;
-  transition: all 1s ease-in-out;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  z-index: 5555;
+  z-index: 120000;
+  transition: all 0.3s linear;
+  opacity: 0;
 }
-
+.top i {
+  background: linear-gradient(to right, #2196f3 50%, #1787e0 50%) no-repeat
+    scroll right bottom/210% 100% var(--yellow-color);
+  transition: all 0.3s ease-in-out;
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+}
+.top i:hover {
+  background-position: left bottom;
+}
 /* End Scroll Top */
 
 /* Start Edit Website */
 i.fa-cog {
   position: fixed;
-  top: 40%;
+  top: 20%;
   left: 0;
   font-size: 20px;
   cursor: pointer;
-  background-color: var(--dark-color-2);
   padding: 5px;
   z-index: 99998;
   transition: all 0.5s linear;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
+  background-color: var(--yellow-color);
 }
 i.fa-cog.open {
   left: 300px;
   transition: all 0.5s linear;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
+  background-color: transparent;
+  animation: rotate 1s linear infinite;
 }
 .edit {
   width: 300px;
@@ -286,55 +292,49 @@ i.fa-cog.open {
   flex-wrap: wrap;
   margin: 20px 10px;
 }
-.edit .box .mode {
-  border-bottom: 1px solid var(--dark-color);
-  margin: 0 0 20px;
+.edit .box h4 {
+  font-weight: 400;
 }
-
-.edit .box .mode button {
-  width: 80%;
-  border: 1px solid var(--yellow-color);
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  padding: 10px 5px;
-  font-size: 18px;
-  background-color: transparent;
-  color: var(--white-color);
-  margin: 10px 0 0 10%;
-  cursor: pointer;
-}
-.edit .box hr {
-  margin: 20px;
-}
-.edit .box ul {
+.edit .box .color ul {
   display: flex;
   justify-content: space-evenly;
   margin-top: 20px;
 }
-.edit .box li {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+.edit .box .color li {
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }
-.edit .box li:nth-child(1) {
+.edit .box .color li:nth-child(1) {
   background-color: #dc9e4b;
 }
-.edit .box li:nth-child(2) {
+.edit .box .color li:nth-child(2) {
   background-color: #ff9800;
 }
-.edit .box li:nth-child(3) {
+.edit .box .color li:nth-child(3) {
   background-color: #8bc34a;
 }
-.edit .box li:nth-child(4) {
-  background-color: #03a9f4;
+.edit .box .color li:nth-child(4) {
+  background-color: #2196f3;
+}
+.edit .box .languages {
+  margin-top: 50px;
+}
+.edit .box .languages ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.edit .box .languages a {
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin: 0 0 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 300;
 }
 /* End Edit Website */
 
@@ -468,7 +468,7 @@ i.fa-cog.open {
 }
 .nav .nav-ul ul li {
   display: block;
-  margin-bottom: 45px;
+  margin: 15px;
   text-align: center;
 }
 .nav .nav-ul ul li:last-child {
@@ -476,50 +476,26 @@ i.fa-cog.open {
 }
 
 .nav .nav-ul ul li a {
-  width: 200px;
-  padding: 15px;
-  text-align: center;
-  border-radius: 25px;
-  background-color: transparent;
   color: var(--color);
-  border: 2px solid var(--yellow-color);
-  margin: 20px 10px;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  -ms-border-radius: 25px;
-  -o-border-radius: 25px;
+  padding: 10px;
+  border-radius: 20px;
   transition: all 0.5s linear;
-  -webkit-transition: all 0.5s linear;
-  -moz-transition: all 0.5s linear;
-  -ms-transition: all 0.5s linear;
-  -o-transition: all 0.5s linear;
+  width: 150px;
+  display: inline-block;
+  background: linear-gradient(
+    to right,
+    var(--yellow-color) 50%,
+    var(--dark-color-2) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  border: 2px solid var(--yellow-color);
 }
-.nav .nav-ul ul li a span {
-  width: 0%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -2px;
-  border-radius: 25px;
-  background-color: var(--yellow-color);
-  z-index: -1;
-  transition: 0.5s;
-}
-.nav .nav-ul ul li a:hover span {
-  width: 106%;
-  border: 1px solid var(--yellow-color);
-}
-.nav .nav-ul ul li a.active span {
-  width: 100%;
-}
+.nav .nav-ul ul li a:hover,
 .nav .nav-ul ul li a.active {
-  border: 0;
+  background-position: left bottom;
+  color: #fff;
+  border: 2px solid var(--yellow-color);
 }
 
 /* End Nav */
@@ -558,21 +534,21 @@ i.fa-cog.open {
   color: var(--yellow-color);
   border: 2px solid var(--yellow-color);
   border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
   transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
+  background: linear-gradient(
+    to right,
+    var(--yellow-color) 50%,
+    var(--dark-color) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
 }
 .home a:hover {
-  background-color: var(--yellow-color);
-  border: 2px solid var(--yellow-color);
+  background-position: left bottom;
   color: #fff;
+  border: 2px solid var(--yellow-color);
 }
+
 @media (max-width: 400px) {
   .home {
     margin-left: 50px;
@@ -662,11 +638,14 @@ i.fa-cog.open {
   }
 }
 .skills .cal span {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .skills .cal span img {
   width: 80px;
   margin: 20px;
+  height: 100%;
 }
 .skills .cal span:nth-child(2) {
   display: inline-block;
@@ -687,7 +666,7 @@ i.fa-cog.open {
   margin: 0px;
   width: 0;
   padding: 10px;
-  transition: all 2s linear;
+  transition: all 1s linear;
   border-radius: 10px;
 }
 /* End Skills */
@@ -767,7 +746,7 @@ i.fa-cog.open {
 }
 @media (min-width: 768px) {
   .works .cal {
-    width: calc(100% / 2 - 20px);
+    width: calc(100% / 3 - 20px);
   }
 }
 .works .cal h2 {
@@ -880,6 +859,7 @@ i.fa-cog.open {
 .footer .card {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .footer div ul {
   display: flex;

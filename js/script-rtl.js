@@ -1,3 +1,17 @@
+// Typeing Text In Heading
+let p = document.querySelector(".home h3");
+let textRtl = "مطور الوجهات الاماميه للمستخدم";
+let index = 0;
+function typeingRtl() {
+  index += 1;
+  p.textContent = textRtl.slice(0, index);
+  if (index >= 30) {
+    index = 0;
+  }
+}
+
+setInterval(() => typeingRtl(), 300);
+
 // Hidden Loader
 let loader = document.getElementById("load");
 
@@ -44,23 +58,6 @@ lis.forEach((li) => {
     });
   });
 });
-
-// Typeing Text In Heading
-
-let p = document.querySelector(".home h3"),
-  text = "Front End Web Developer";
-
-let index = 0;
-
-function typeing() {
-  index += 1;
-  p.textContent = text.slice(0, index);
-  if (index >= 24) {
-    index = 0;
-  }
-}
-
-setInterval(() => typeing(), 300);
 
 // Scroll To Top
 
