@@ -206,7 +206,7 @@ a {
   background-color: var(--dark-color);
   position: fixed;
   width: 100%;
-  z-index: 99999;
+  z-index: 999999995555599955;
   top: 0;
   left: 0;
 }
@@ -880,6 +880,7 @@ i.fa-cog.open {
   opacity: 0.6;
   width: 40px;
   display: block;
+  font-size: 20px
 }
 
 .footer div ul a i:hover {
@@ -898,6 +899,9 @@ i.fa-cog.open {
 }
 .footer div ul a .fa-codepen:hover {
   background-color: #444;
+}
+.footer div ul a .fa-instagram:hover {
+  background-color: #3f729b;
 }
 /* End Footer */
 
