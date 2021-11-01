@@ -1,4 +1,4 @@
-<img align=center scr=https://readme-typing-svg.herokuapp.com?color=%23000000&width=80&lines=Portfolio>
+<img align=center src="https://readme-typing-svg.herokuapp.com?color=%23000000&width=80&lines=Portfolio">
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=The+site+where+I+will+present+my+projects)
 
