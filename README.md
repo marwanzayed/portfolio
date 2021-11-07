@@ -2,13 +2,15 @@
 
 ![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=The+site+where+I+will+present+my+projects)
 
-![Alt Text](portfolio.png)
-
 [Demo](https://maro-portfolio.netlify.app/)
 
-> Start Code
+![Alt-Text](portfolio.jpeg)
+![Alt-Text-Ar](portfolio-ar.jpeg)
+
+> The Code
 
 _*HTML*_
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -486,6 +488,7 @@ _*HTML*_
   </body>
 </html>
 ```
+
 _*CSS*_
 
 ```
@@ -1433,7 +1436,9 @@ i.fa-cog.open {
 
 /* End Animation */
 ```
+
 _*JavaScript*_
+
 ```
 // Hidden Loader
 let loader = document.getElementById("load");

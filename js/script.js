@@ -4,13 +4,9 @@ let loader = document.getElementById("load");
 document.body.style.overflow = "hidden";
 
 setTimeout(function () {
-  loader.style.cssText = "opacity: 0; transition: all 1s linear;";
+  loader.style.cssText = "opacity: 0; z-index: -999999995555599955;";
   document.body.style.overflow = "auto";
 }, 2000);
-
-setTimeout(function () {
-  loader.style.cssText = "z-index: -3; opacity: 0;";
-}, 3000);
 
 // Show And Hidden Nav
 
@@ -21,13 +17,11 @@ let divider = document.getElementById("divider"),
 divider.onclick = function () {
   divider.classList.add("open");
   if (divider.classList.contains("open") === true) {
-    nav.style.cssText =
-      "z-index: 55555; opacity: 1; visibility: visible; transition: all 1s linear;";
+    nav.style.cssText = "z-index: 55555; opacity: 1; visibility: visible;";
   }
 };
 closeDiv.onclick = function () {
-  nav.style.cssText =
-    "z-index: -1; opacity: 0; visibility: hidden; transition: all 1s linear;";
+  nav.style.cssText = "z-index: -1; opacity: 0; visibility: hidden;";
 };
 
 // Added Class Active To Li Link
@@ -39,20 +33,19 @@ lis.forEach((li) => {
     lis.forEach((li) => {
       li.classList.remove("active");
       this.classList.add("active");
-      nav.style.cssText =
-        "z-index: -1; opacity: 0; visibility: hidden; transition: all 1s linear;";
+      nav.style.cssText = "z-index: -1; opacity: 0; visibility: hidden;";
     });
   });
 });
 
-// Typeing Text In Heading
+// Typing Text In Heading
 
 let p = document.querySelector(".home h3"),
   text = "Front End Web Developer";
 
 let index = 0;
 
-function typeing() {
+function Typing() {
   index += 1;
   p.textContent = text.slice(0, index);
   if (index >= 24) {
@@ -60,7 +53,7 @@ function typeing() {
   }
 }
 
-setInterval(() => typeing(), 300);
+setInterval(() => Typing(), 300);
 
 // Scroll To Top
 
@@ -70,9 +63,9 @@ btn.style.opacity = "0";
 
 window.onscroll = function () {
   if (window.scrollY >= 500) {
-    btn.style.cssText = "opacity: 1; transition: all 0.3s ease-in-out;";
+    btn.style.cssText = "opacity: 1;";
   } else {
-    btn.style.cssText = "opacity: 0; transition: all 0.3s ease-in-out;";
+    btn.style.cssText = "opacity: 0;";
   }
 };
 
@@ -102,14 +95,10 @@ cog.onclick = function () {
 
 let edit = document.querySelectorAll(".edit .color li"),
   html = document.querySelector("html");
-if (
-  window.localStorage.getItem("color") !== null
-  // window.localStorage.getItem("colorAlt") !== undefined
-) {
+if (window.localStorage.getItem("color") !== null) {
   html.style.cssText = `--yellow-color: ${window.localStorage.getItem(
     "color"
   )};`;
-  // html.style.cssText = `--yellow-color-alt: ${window.localStorage.getItem("color-alt")};`;
 } else {
   html.style.cssText = `--yellow-color: #dc9e4b;`;
 }
@@ -117,43 +106,33 @@ if (
 edit.forEach((li) => {
   li.addEventListener("click", (e) => {
     window.localStorage.setItem("color", e.currentTarget.dataset.color);
-    // window.localStorage.setItem("color-alt", e.currentTarget.dataset.colorAlt);
     html.style.cssText = `--yellow-color: ${e.currentTarget.dataset.color};`;
   });
 });
 
-// Fill Bar
-let progress = document.querySelector(".progress"),
-  prog = document.querySelectorAll(".prog");
-
-window.addEventListener("scroll", function () {
-  const progressWidth = progress.getBoundingClientRect().top;
-  if (window.innerHeight > progressWidth) {
-    prog.forEach((bar) => {
-      const barWidth = bar.dataset.prgo;
-      bar.style.width = `${barWidth}%`;
-    });
-  } else {
-    prog.forEach((bar) => {
-      bar.style.width = `0`;
-    });
-  }
-});
-
-// Cut Class Active To Nav
-let home = document.getElementById("home");
-
-let about = document.getElementById("about");
-
-let skills = document.getElementById("skills");
-
-let services = document.getElementById("services");
-
-let works = document.getElementById("works");
-
-let contact = document.getElementById("contact");
+let home = document.getElementById("home"),
+  about = document.getElementById("about"),
+  skills = document.getElementById("skills"),
+  services = document.getElementById("services"),
+  works = document.getElementById("works"),
+  contact = document.getElementById("contact"),
+  progressSpans = document.querySelectorAll(".the-progress span"),
+  section = document.querySelector(".progress");
 
 window.addEventListener("scroll", () => {
+  // Skills Animate Width
+  if (window.scrollY >= section.offsetTop - 250) {
+    progressSpans.forEach((span) => {
+      span.style.width = span.dataset.width;
+    });
+  } else {
+    progressSpans.forEach((span) => {
+      span.style.width = "0";
+    });
+  }
+  //
+  // Remove And Add Class Active To Nav Link
+  //
   homeScroll = home.getBoundingClientRect().top;
   if (window.innerHeight > homeScroll) {
     let homeA = document.querySelector('.nav-ul a[href="#home"]');
@@ -164,42 +143,42 @@ window.addEventListener("scroll", () => {
   }
   aboutScroll = about.getBoundingClientRect().top;
   if (window.innerHeight > aboutScroll) {
-    let abouta = document.querySelector('.nav-ul a[href="#about"]');
+    let aboutA = document.querySelector('.nav-ul a[href="#about"]');
     lis.forEach((li) => {
       li.classList.remove("active");
-      abouta.classList.add("active");
+      aboutA.classList.add("active");
     });
   }
   skillsScroll = skills.getBoundingClientRect().top;
   if (window.innerHeight > skillsScroll) {
-    let skillsa = document.querySelector('.nav-ul a[href="#skills"]');
+    let skillsA = document.querySelector('.nav-ul a[href="#skills"]');
     lis.forEach((li) => {
       li.classList.remove("active");
-      skillsa.classList.add("active");
+      skillsA.classList.add("active");
     });
   }
   servicesScroll = services.getBoundingClientRect().top;
   if (window.innerHeight > servicesScroll) {
-    let servicesa = document.querySelector('.nav-ul a[href="#services"]');
+    let servicesA = document.querySelector('.nav-ul a[href="#services"]');
     lis.forEach((li) => {
       li.classList.remove("active");
-      servicesa.classList.add("active");
+      servicesA.classList.add("active");
     });
   }
   worksScroll = works.getBoundingClientRect().top;
   if (window.innerHeight > worksScroll) {
-    let worksa = document.querySelector('.nav-ul a[href="#works"]');
+    let worksA = document.querySelector('.nav-ul a[href="#works"]');
     lis.forEach((li) => {
       li.classList.remove("active");
-      worksa.classList.add("active");
+      worksA.classList.add("active");
     });
   }
   contactScroll = contact.getBoundingClientRect().top;
   if (window.innerHeight > contactScroll) {
-    let contacta = document.querySelector('.nav-ul a[href="#contact"]');
+    let contactA = document.querySelector('.nav-ul a[href="#contact"]');
     lis.forEach((li) => {
       li.classList.remove("active");
-      contacta.classList.add("active");
+      contactA.classList.add("active");
     });
   }
 });

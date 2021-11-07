@@ -15,16 +15,22 @@ body {
 .head {
   border-left: none;
   border-right: 2px solid var(--yellow-color);
+  background-position: right bottom;
+  overflow: hidden;
 }
 
+.head:hover {
+  background-position: left bottom;
+  color: #fff;
+}
 /* End Global Rules */
 /* Start Home */
 .home {
   overflow-x: hidden;
 }
 .home h3 {
-  border-left: 1px solid var(--yellow-color);
-  border-right: none;
+  /* border-left: 1px solid var(--yellow-color); */
+  /* border-right: none; */
 }
 /* End Home */
 /* Start About */
