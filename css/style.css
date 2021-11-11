@@ -15,6 +15,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 html {
   scroll-behavior: smooth;
@@ -25,7 +27,7 @@ body {
   background-color: var(--dark-color);
   color: var(--white-color);
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 ::-webkit-scrollbar {
@@ -125,6 +127,8 @@ ol {
   );
   background-size: 200% 100%;
   background-position: right bottom;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 .head:hover {
   background-position: left bottom;
@@ -145,7 +149,11 @@ a {
 .clearFix {
   clear: both;
 }
-
+@media (max-width: 767px) {
+  .hidden-xl {
+    display: none;
+  }
+}
 .effect-warp .effect {
   position: absolute;
   z-index: -1;
@@ -209,6 +217,7 @@ a {
   z-index: 999999995555599955;
   top: 0;
   left: 0;
+  transition: all 1s linear;
 }
 .load span {
   width: 100px;
@@ -236,6 +245,7 @@ a {
   z-index: 120000;
   transition: all 0.3s linear;
   opacity: 0;
+  transition: all 0.3s ease-in-out;
 }
 .top i {
   background: linear-gradient(to right, #2196f3 50%, #1787e0 50%) no-repeat
@@ -268,13 +278,13 @@ i.fa-cog {
   background-color: var(--yellow-color);
 }
 i.fa-cog.open {
-  left: 300px;
+  left: 200px;
   transition: all 0.5s linear;
   background-color: transparent;
   animation: rotate 1s linear infinite;
 }
 .edit {
-  width: 300px;
+  width: 200px;
   position: fixed;
   top: 0;
   left: 0;
@@ -347,6 +357,7 @@ i.fa-cog.open {
   top: 0;
   left: 0;
   z-index: 99;
+  height: 65px;
 }
 .navbar .card {
   display: flex;
@@ -427,6 +438,7 @@ i.fa-cog.open {
   opacity: 0;
   visibility: hidden;
   overflow-y: auto;
+  transition: all 1s linear;
 }
 .nav .close {
   height: 40px;
@@ -490,6 +502,7 @@ i.fa-cog.open {
   background-size: 200% 100%;
   background-position: right bottom;
   border: 2px solid var(--yellow-color);
+  transition: all 0.3s linear;
 }
 .nav .nav-ul ul li a:hover,
 .nav .nav-ul ul li a.active {
@@ -507,7 +520,6 @@ i.fa-cog.open {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-left: 60px;
 }
 .home h2 {
   font-size: 30px;
@@ -527,6 +539,7 @@ i.fa-cog.open {
   text-transform: uppercase;
   margin: 0;
   z-index: -1;
+  font-weight: 900;
 }
 .home a {
   display: inline-block;
@@ -550,9 +563,6 @@ i.fa-cog.open {
 }
 
 @media (max-width: 400px) {
-  .home {
-    margin-left: 50px;
-  }
   .home h2 {
     font-size: 20px;
     margin: 10px 0;
@@ -581,6 +591,7 @@ i.fa-cog.open {
 .about b {
   color: var(--yellow-color);
   text-transform: uppercase;
+  font-weight: 600;
 }
 .about p {
   text-transform: capitalize;
@@ -606,6 +617,7 @@ i.fa-cog.open {
 }
 
 .skills .cal {
+  direction: ltr;
   background-color: var(--dark-color-2);
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -625,6 +637,7 @@ i.fa-cog.open {
 @media (max-width: 767px) {
   .skills .cal {
     width: calc(100% - 20px);
+    flex-direction: column;
   }
 }
 @media (min-width: 768px) {
@@ -651,23 +664,36 @@ i.fa-cog.open {
   display: inline-block;
   font-size: 20px;
 }
-.skills .progress {
-  margin-top: 30px;
+.skills .skills {
+  flex: 1;
+  direction: ltr;
 }
-.skills .progress div {
+.skills .skill h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+}
+.skills .skill h3 span {
+  font-size: 12px;
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+  border-radius: 4px;
+  color: var(--yellow-color);
+}
+.skills .skill .the-progress {
+  height: 30px;
   background-color: var(--dark-color-2);
-  margin: 10px;
-  width: 100%;
-  border-radius: 10px;
-  padding: 3px;
+  position: relative;
+  margin: 10px 0;
 }
-.skills .progress div div {
+.skills .skill .the-progress span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
   background-color: var(--yellow-color);
-  margin: 0px;
-  width: 0;
-  padding: 10px;
-  transition: all 1s linear;
-  border-radius: 10px;
+  transition: width 1s linear;
 }
 /* End Skills */
 
@@ -841,7 +867,7 @@ i.fa-cog.open {
 .contact .items .cal p {
   color: var(--yellow-color);
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 400;
 }
 @media (max-width: 767px) {
   .contact .items .cal p {
@@ -860,13 +886,18 @@ i.fa-cog.open {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+}
+footer .card div:nth-child(2) {
+  margin: 10px 0 0;
 }
 .footer div ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .footer div ul li {
-  margin: 0 10px;
+  margin: 5px;
 }
 .footer div ul a i {
   padding: 10px 0px;
@@ -880,7 +911,7 @@ i.fa-cog.open {
   opacity: 0.6;
   width: 40px;
   display: block;
-  font-size: 20px
+  font-size: 20px;
 }
 
 .footer div ul a i:hover {
