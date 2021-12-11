@@ -794,7 +794,6 @@ i.fa-cog.open {
   color: var(--color);
   display: block;
   text-align: center;
-  margin: 10px 0;
   font-size: 18px;
   border: 1px solid var(--yellow-color);
   padding: 10px;
@@ -803,7 +802,7 @@ i.fa-cog.open {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  margin: 0 5px;
+  margin: 10px 5px;
   transition: all 0.5s linear;
   -webkit-transition: all 0.5s linear;
   -moz-transition: all 0.5s linear;
