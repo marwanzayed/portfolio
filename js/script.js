@@ -121,7 +121,7 @@ let home = document.getElementById("home"),
 
 window.addEventListener("scroll", () => {
   // Skills Animate Width
-  if (window.scrollY >= section.offsetTop - 250) {
+  if (window.scrollY >= section.offsetTop - 150) {
     progressSpans.forEach((span) => {
       span.style.width = span.dataset.width;
     });

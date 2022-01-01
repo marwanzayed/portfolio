@@ -280,8 +280,6 @@ i.fa-cog {
 i.fa-cog.open {
   left: 200px;
   transition: all 0.5s linear;
-  background-color: transparent;
-  animation: rotate 1s linear infinite;
 }
 .edit {
   width: 200px;
@@ -772,6 +770,11 @@ i.fa-cog.open {
 }
 @media (min-width: 768px) {
   .works .cal {
+    width: calc(100% / 2 - 20px);
+  }
+}
+@media (min-width: 992px) {
+  .works .cal {
     width: calc(100% / 3 - 20px);
   }
 }
@@ -808,14 +811,11 @@ i.fa-cog.open {
   -moz-transition: all 0.5s linear;
   -ms-transition: all 0.5s linear;
   -o-transition: all 0.5s linear;
+  font-family: "Poppins", sans-serif;
 }
 .works .cal .mask a:hover {
   background-color: var(--yellow-color);
   border: 1px solid var(--yellow-color);
-}
-.works .item .cal:hover .mask {
-  opacity: 1;
-  visibility: visible;
 }
 /* End Works */
 
